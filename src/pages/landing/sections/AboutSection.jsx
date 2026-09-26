@@ -41,7 +41,7 @@ const AboutSection = () => {
 
         {/* 컨텐츠 영역 */}
         <div className="flex flex-col xl:flex-row gap-10 items-center relative">
-            <ScrollReveal delay={80} className="w-full max-w-90 shrink-0">
+            <ScrollReveal delay={80} className="scroll-reveal--scale w-full max-w-90 shrink-0">
               <ImageSlider />
             </ScrollReveal>
             <div className="flex flex-col items-start gap-6">

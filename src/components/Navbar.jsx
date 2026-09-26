@@ -2,8 +2,8 @@ import { useState } from "react";
 import {Link} from "react-router-dom"
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi"
 
-const NavLink = ({ to, children }) => (
-  <Link to={to} className="no-underline opacity-85 hover:opacity-100">
+const NavLink = ({ to, children, onClick }) => (
+  <Link to={to} onClick={onClick} className="no-underline opacity-85 hover:opacity-100">
     {children}
   </Link>
 )
@@ -56,12 +56,10 @@ export default function Navbar() {
           <NavLink to="/apply">지원하기</NavLink>
         </nav>
       </div>
-      <div className="md:block hidden">
-        <NavLink to="/login">로그인</NavLink>
-      </div>
-
       <button
         className="md:hidden cursor-pointer"
+        aria-label={mobileOpen ? "메뉴 닫기" : "메뉴 열기"}
+        aria-expanded={mobileOpen}
         onClick={() => setMobileOpen(prev => !prev)}
       >
         {mobileOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-2xl" />}
@@ -86,10 +84,6 @@ export default function Navbar() {
 
           <NavLink to="/projects" onClick={closeMobile}>프로젝트</NavLink>
           <NavLink to="/apply" onClick={closeMobile}>지원하기</NavLink>
-
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-blue-400/30 to-transparent" />
-
-          <NavLink to="/login" onClick={closeMobile}>로그인</NavLink>
 
         </div>
       )}

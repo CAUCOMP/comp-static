@@ -6,7 +6,7 @@
 
 |                                   Backend                                   |                                    Backend                                    |                            Backend                            |
 | :-------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :-----------------------------------------------------------: |
-|          <img src="https://github.com/HeejuKo.png" width="150" />           |        <img src="https://github.com/kim-seungbeom.png" width="150" />         |   <img src="https://github.com/02junho.png" width="150" />    |       <img src="https://github.com/sooowii.png" width="150" />       |
+|          <img src="https://github.com/Jihaeee.png" width="150" />           |        <img src="https://github.com/kim-seungbeom.png" width="150" />         |       <img src="https://github.com/sooowii.png" width="150" />       |
 | [강지혜](https://github.com/Jihaeee)<br/>COMP 37기<br/>COMP 38기 회장 | [김승범](https://github.com/kim-seungbeom)<br/>COMP 36기<br/>COMP 40기 멘토 | [정수영](https://github.com/sooowii)<br/>COMP 39기<br/>COMP 40기 멘토 |
 
 

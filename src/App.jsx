@@ -5,12 +5,14 @@ import ApplyPage from "./pages/ApplyPage";
 import GalleryPage from "./pages/archive/GalleryPage";
 import ProjectPage from "./pages/ProjectPage";
 import OBPage from "./pages/archive/OBPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/apply" element={<ApplyPage />} />
         <Route path="/archive/gallery" element={<GalleryPage />} />
         <Route path="/archive/ob" element={<OBPage />} />

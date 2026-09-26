@@ -1,4 +1,5 @@
 import ScrollBar from '@/components/ScrollBar'
+import ScrollReveal from '@/components/ScrollReveal'
 import horizontalLine from '@/assets/intro/horizontal-line.svg'
 import verticalLine from '@/assets/intro/vertical-line.svg'
 
@@ -16,15 +17,17 @@ const IntroductionSection = () => (
     className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center bg-[#000925] px-6 pb-36 pt-28 scroll-mt-20 md:px-12"
   >
     <div className="mx-auto w-full max-w-6xl text-center">
-      <h2
-        id="introduction-heading"
-        className="text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.6] font-normal break-keep"
-      >
-        <strong className="font-bold">COMP</strong>는 소수정예로 함께 배우고,
-        <br className="hidden md:block" /> 스터디와 프로젝트로 성장하는 중앙대학교 웹·앱 개발 동아리입니다.
-      </h2>
+      <ScrollReveal>
+        <h2
+          id="introduction-heading"
+          className="text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.6] font-normal break-keep"
+        >
+          <strong className="font-bold">COMP</strong>는 소수정예로 함께 배우고,
+          <br className="hidden md:block" /> 스터디와 프로젝트로 성장하는 중앙대학교 웹·앱 개발 동아리입니다.
+        </h2>
+      </ScrollReveal>
 
-      <div className="relative mx-auto mt-12 h-[300px] w-full max-w-[993px] md:mt-16 md:h-[440px]">
+      <ScrollReveal delay={120} className="relative mx-auto mt-12 h-[300px] w-full max-w-[993px] md:mt-16 md:h-[440px]">
         <img
           src={horizontalLine}
           alt=""
@@ -45,7 +48,7 @@ const IntroductionSection = () => (
             </div>
           ))}
         </dl>
-      </div>
+      </ScrollReveal>
     </div>
 
     <ScrollBar targetId="about" />

@@ -1,5 +1,5 @@
 import ImageSlider from '@/components/ImageSlider'
-import React from 'react'
+import ScrollReveal from '@/components/ScrollReveal'
 import { FiBook, FiStar } from 'react-icons/fi'
 import { FaChalkboardTeacher, FaLaptopCode } from "react-icons/fa";
 
@@ -31,40 +31,40 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col justify-center p-20 gap-6">
+    <section id="about" className="relative min-h-screen flex flex-col justify-center overflow-x-clip px-6 py-20 md:p-20 gap-6 scroll-mt-20">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="">
+        <ScrollReveal>
             <p className="text-blue-300/60 text-sm tracking-widest">Why COMP?</p>
             <h2 className="font-medium text-[28px]">컴퓨터와 나와 친구들이 있는 곳</h2>
-        </div>
+        </ScrollReveal>
 
         {/* 컨텐츠 영역 */}
-        <div className="flex gap-10 items-center relative">
-            <ImageSlider />
+        <div className="flex flex-col xl:flex-row gap-10 items-center relative">
+            <ScrollReveal delay={80} className="w-full max-w-90 shrink-0">
+              <ImageSlider />
+            </ScrollReveal>
             <div className="flex flex-col items-start gap-6">
-            {features.map((feature, index) => (
-              <article 
-                key={index} 
-                className="w-full flex flex-col gap-1">
-
-                <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full border border-blue-400/30 bg-blue-500/10 flex items-center justify-center drop-shadow-[0_0_6px_rgba(96,165,250,0.3)]">
+              {features.map((feature, index) => (
+                <ScrollReveal key={feature.title} delay={index * 70} className="w-full">
+                  <article className="w-full flex flex-col gap-1">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full border border-blue-400/30 bg-blue-500/10 flex items-center justify-center drop-shadow-[0_0_6px_rgba(96,165,250,0.3)]">
                         {feature.icon}
+                      </div>
+                      <h2 className="font-medium text-[24px]">{feature.title}</h2>
                     </div>
-                    <h2 className="font-medium text-[24px]">{feature.title}</h2>
-              </div>
-                
-                {index < features.length && (
-                <hr className="border-t border-blue-400/30 mb-2" />
-                )}
 
-                <p className="font-light text-[20px] tracking-[0] whitespace-pre-line text-white/80">
-                  {feature.description}
-                </p>
+                    {index < features.length && (
+                      <hr className="border-t border-blue-400/30 mb-2" />
+                    )}
 
-              </article>
-            ))}
+                    <p className="font-light text-[20px] tracking-[0] whitespace-pre-line text-white/80">
+                      {feature.description}
+                    </p>
+                  </article>
+                </ScrollReveal>
+              ))}
           </div>
         </div>
 

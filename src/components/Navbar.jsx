@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {Link} from "react-router-dom"
-import { FiMenu, FiX, FiChevronDown } from "react-icons/fi"
+import { FiMenu, FiX } from "react-icons/fi"
 
 const NavLink = ({ to, children, onClick }) => (
   <Link to={to} onClick={onClick} className="no-underline opacity-85 hover:opacity-100">
@@ -9,12 +9,10 @@ const NavLink = ({ to, children, onClick }) => (
 )
 
 export default function Navbar() {
-  const [archiveOpen, setArchiveOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const closeMobile = () => {
     setMobileOpen(false)
-    setArchiveOpen(false)
   }
 
   return (
@@ -24,34 +22,8 @@ export default function Navbar() {
           <NavLink to="/">&lt;OM/&gt;</NavLink>
         </div>
         <nav className="gap-6 hidden md:flex" aria-label="Top navigation">
-          <div className="relative">
-            <button
-              className="flex items-center gap-1 opacity-85 hover:opacity-100 cursor-pointer"
-              onClick={() => setArchiveOpen(prev => !prev)}
-            >
-              아카이브
-            </button>
-
-            {archiveOpen && (
-              <div className="absolute top-full -left-7 mt-3 flex flex-col bg-[#000925] border border-blue-400/20 rounded-xl overflow-hidden min-w-[120px] items-center">
-                <Link
-                  to="/archive/gallery"
-                  onClick={() => setArchiveOpen(false)}
-                  className="px-5 py-3 text-white/60 hover:text-white no-underline"
-                >
-                  갤러리
-                </Link>
-                <Link
-                  to="/archive/ob"
-                  onClick={() => setArchiveOpen(false)}
-                  className="px-5 py-3 text-white/60 hover:text-white no-underline"
-                >
-                  OB
-                </Link>
-              </div>
-            )}
-          </div>
-
+          <NavLink to="/archive/gallery">갤러리</NavLink>
+          <NavLink to="/archive/ob">OB</NavLink>
           <NavLink to="/projects">프로젝트</NavLink>
           <NavLink to="/apply">지원하기</NavLink>
         </nav>
@@ -66,26 +38,12 @@ export default function Navbar() {
       </button>
 
       {mobileOpen &&(
-        <div className="md:hidden absolute top-full left-0 w-full flex flex-col px-7 py-6 gap-6 text-[18px] bg-[#000925] border-t border-blue-400/2">
-          <button
-            className="flex items-center justify-between opacity-85 cursor-pointer"
-            onClick={() => setArchiveOpen(prev => !prev)}
-          >
-            아카이브
-            <FiChevronDown className={`transition-transform duration-300 ${archiveOpen ? 'rotate-180' : ''}`} />
-          </button>
-
-          {archiveOpen && (
-            <div className="flex flex-col gap-4 pl-4 border-l border-blue-400/20">
-              <Link to="/archive/gallery" onClick={closeMobile} className="text-white/60 hover:text-white no-underline">갤러리</Link>
-              <Link to="/archive/ob" onClick={closeMobile} className="text-white/60 hover:text-white no-underline">OB</Link>
-            </div>
-          )}
-
+        <nav aria-label="Mobile navigation" className="md:hidden absolute top-full left-0 w-full flex flex-col px-7 py-6 gap-6 text-[18px] bg-[#000925] border-t border-blue-400/2">
+          <NavLink to="/archive/gallery" onClick={closeMobile}>갤러리</NavLink>
+          <NavLink to="/archive/ob" onClick={closeMobile}>OB</NavLink>
           <NavLink to="/projects" onClick={closeMobile}>프로젝트</NavLink>
           <NavLink to="/apply" onClick={closeMobile}>지원하기</NavLink>
-
-        </div>
+        </nav>
       )}
     </header>
   );

@@ -1,72 +1,113 @@
 # ☁️ COMP Client
 
-중앙대학교 개발 동아리 **COMP**의 웹 서비스 **프론트엔드(Client)** 레포지토리입니다.  
+중앙대학교 개발 동아리 **COMP**의 웹 서비스 **임시 배포용** 레포지토리입니다.  
+
+## 👤 Front 팀원 소개
+
+|                                   Backend                                   |                                    Backend                                    |                            Backend                            |
+| :-------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :-----------------------------------------------------------: |
+|          <img src="https://github.com/HeejuKo.png" width="150" />           |        <img src="https://github.com/kim-seungbeom.png" width="150" />         |   <img src="https://github.com/02junho.png" width="150" />    |       <img src="https://github.com/sooowii.png" width="150" />       |
+| [강지혜](https://github.com/Jihaeee)<br/>COMP 37기<br/>COMP 38기 회장 | [김승범](https://github.com/kim-seungbeom)<br/>COMP 36기<br/>COMP 40기 멘토 | [정수영](https://github.com/sooowii)<br/>COMP 39기<br/>COMP 40기 멘토 |
 
 
+
+## 🧰 Tech Stack
+
+#### 🛠 Frontend & Framework
+
+<div>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 19">
+  <img src="https://img.shields.io/badge/Vite%207-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite 7">
+  <img src="https://img.shields.io/badge/React%20Router%207-CA4245?style=flat-square&logo=reactrouter&logoColor=white" alt="React Router 7">
+</div>
+
+#### 🎨 Styling & Icons
+
+<div>
+  <img src="https://img.shields.io/badge/Tailwind%20CSS%204-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4">
+  <img src="https://img.shields.io/badge/React%20Icons-E91E63?style=flat-square&logo=react&logoColor=white" alt="React Icons">
+</div>
+
+#### 📦 Package Management & Code Quality
+
+<div>
+  <img src="https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white" alt="npm">
+  <img src="https://img.shields.io/badge/ESLint%209-4B32C3?style=flat-square&logo=eslint&logoColor=white" alt="ESLint 9">
+</div>
+
+#### 🚀 Deployment & Collaboration
+
+<div>
+  <img src="https://img.shields.io/badge/Vercel-Planned-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel 배포 예정">
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+</div>
 ---
 
-## 🧑‍💻 Ground Rules (협업 규칙)
 
-프로젝트의 일관성과 효율적인 협업을 위해 아래 규칙을 반드시 준수합니다.
+## 📋 Github Workflow
 
-### ✅ Branch Strategy
+### 작업 흐름
 
-브랜치는 아래 규칙에 따라 생성하며, `main` 브랜치 직접 Push는 엄격히 금지합니다.
+1. 작업 시작 전 GitHub Issue 생성
+2. 생성한 Issue를 GitHub Project Board에 연결
+3. develop 브랜치 기준 작업 브랜치 생성
+4. 작업 진행 후 Commit Convention에 맞게 커밋
+5. 작업 완료 후 develop 브랜치로 Pull Request 생성
+6. PR 생성 시 관련 Issue 연결 (Closes #이슈번호)
+7. Merge 후 Project 상태 업데이트
 
-| Branch | Purpose | 설명 |
-| :--- | :--- | :--- |
-| **main** | Production | 배포 가능한 안정 버전 |
-| **develop** | Staging | 기능 개발 통합 및 테스트 브랜치 |
-| **feature/** | Feature | 새로운 기능 개발 (예: `feature/login`) |
-| **fix/** | Bug Fix | 버그 수정 |
-| **hotfix/** | Emergency | 배포 중인 버전의 긴급 수정 |
+#### 작업 전 규칙
 
----
+- 모든 작업 시작 전, 작업 브랜치에서 최신 develop 브랜치를 pull
 
-### ✅ Commit Convention
+#### PR 전 규칙
 
-커밋 메시지는 작업 성격을 한눈에 알 수 있도록 아래 형식을 따릅니다.
-`타입: 작업 내용` (예: `feat: 로그인 기능 구현`)
+- PR 생성 전 원격 develop 브랜치에 변경 사항이 있을 경우  
+  작업 브랜치에 develop 브랜치 merge 후 PR 생성
 
-| Type | Meaning | 설명 |
-| :--- | :--- | :--- |
-| **feat** | Feature | 새로운 기능 추가 |
-| **fix** | Bug Fix | 버그 수정 |
-| **chore** | Chore | 설정, 환경 설정, 패키지 관리 |
-| **docs** | Documentation | 문서 수정 (README 등) |
-| **scaffold** | Structure | 프로젝트 초기 구조 세팅 |
-| **refactor** | Refactoring | 코드 리팩토링 |
-| **style** | Style | 코드 포맷팅, 세미콜론 누락 등 (UI 수정 아님) |
-| **test** | Test | 테스트 코드 추가 및 수정 |
+### 브랜치 전략
 
----
+```
+main       -> 배포 브랜치
+develop    -> 개발 통합 브랜치
+feature/*  -> 기능 개발 브랜치
+fix/*      -> 버그 수정 브랜치
+refactor/* -> 리팩토링 브랜치
+chore/*    -> 설정/환경 작업 브랜치
+```
 
-### ✅ Issue & PR Rule
+### Commit Message Convention
 
-모든 작업은 **Issue 기반**으로 진행하며, PR을 통해 코드 리뷰를 거칩니다.
+형식
 
-#### 🔄 Workflow
-1. **Issue 생성**: 작업 할당 및 번호 생성
-2. **브랜치 생성**: `feature/#이슈번호-기능명` 형식 
-3. **기능 개발**: 커밋 컨벤션 준수
-4. **Pull Request 생성**: 템플릿에 맞춰 상세 내용 작성
-5. **코드 리뷰**: 팀원 확인 및 피드백
-6. **Merge**: 최소 1명 이상의 승인(Approve) 후 Merge
+```
+type(scope): commit message (#issue-number)
+```
 
-#### 📝 PR Title Convention
-`[TYPE] 작업 내용` 형식으로 작성합니다.
-- `[FEAT] 로그인 페이지 구현`
-- `[FIX] 헤더 UI 깨짐 수정`
-- `[CHORE] 프로젝트 환경 설정 변경`
+예시
 
-#### 📋 PR Checklist
-- [ ] 기능이 정상적으로 동작하는가?
-- [ ] Console Error/Warning이 없는가?
-- [ ] 관련 Issue를 연결(`Closes #이슈번호`) 했는가?
-- [ ] UI 변경 시 스크린샷을 첨부했는가?
-- [ ] 불필요한 주석 및 `console.log`를 제거했는가?
+```
+feat(auth): 회원가입 기능 추가 (#5)
+fix(upload): 이미지 업로드 오류 수정 (#18)
+```
 
----
+| Type     | 의미                              |
+| -------- | --------------------------------- |
+| feat     | 새로운 기능 추가                  |
+| fix      | 버그 수정                         |
+| docs     | 문서 수정                         |
+| style    | 코드 스타일 수정 (로직 변경 없음) |
+| refactor | 리팩토링                          |
+| test     | 테스트 코드 추가/수정             |
+| chore    | 설정, 의존성, 기타 작업           |
+| perf     | 성능 개선                         |
+| ci       | CI/CD 설정 변경                   |
+| build    | 빌드 관련 작업                    |
+| revert   | 이전 커밋 되돌리기                |
+
+
 
 ### ✅ Code Style & Structure
 

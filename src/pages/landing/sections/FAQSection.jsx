@@ -30,7 +30,7 @@ const FAQSection = () => {
 
   return (
     
-    <section className="min-h-[70vh] px-30 pt-30 flex flex-col items-center gap-10 relative">
+    <section className="relative min-h-[70vh] flex flex-col items-center gap-10 overflow-x-clip px-6 pt-24 md:px-30 md:pt-30">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="text-center flex flex-col items-center gap-2 mb-4">

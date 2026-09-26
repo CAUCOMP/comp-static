@@ -1,5 +1,4 @@
 import ImageSlider from '@/components/ImageSlider'
-import React from 'react'
 import { FiBook, FiStar } from 'react-icons/fi'
 import { FaChalkboardTeacher, FaLaptopCode } from "react-icons/fa";
 
@@ -31,7 +30,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col justify-center p-20 gap-6">
+    <section id="about" className="relative min-h-screen flex flex-col justify-center overflow-x-clip px-6 py-20 md:p-20 gap-6 scroll-mt-20">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="">
@@ -40,7 +39,7 @@ const AboutSection = () => {
         </div>
 
         {/* 컨텐츠 영역 */}
-        <div className="flex gap-10 items-center relative">
+        <div className="flex flex-col xl:flex-row gap-10 items-center relative">
             <ImageSlider />
             <div className="flex flex-col items-start gap-6">
             {features.map((feature, index) => (

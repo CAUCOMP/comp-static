@@ -36,8 +36,10 @@ const AboutPage = () => (
           </p>
         </div>
 
-        <div className="flex min-h-64 items-center justify-center rounded-3xl border border-blue-300/20 bg-white/[0.04] p-6 md:min-h-80">
-          <img src={compLogo} alt="COMP 로고" className="h-auto w-full max-w-[320px] rounded-2xl object-contain" />
+        <div className="flex items-center justify-center">
+          <div className="aspect-square w-full max-w-[400px] overflow-hidden rounded-full">
+            <img src={compLogo} alt="COMP 로고" className="h-full w-full scale-[1.06] object-cover" />
+          </div>
         </div>
       </section>
 

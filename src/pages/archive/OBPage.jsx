@@ -19,19 +19,19 @@ import seoulNationalUniversityLogo from '@/assets/organizations/seoul-national-u
 import utAustinLogo from '@/assets/organizations/ut-austin.png'
 
 const workplaces = [
-  { name: 'NC', logo: ncLogo, cropWidth: 400 },
-  { name: '당근', logo: daangnLogo, cropWidth: 320 },
-  { name: '삼성전자', logo: samsungLogo },
-  { name: 'SK하이닉스', logo: skHynixLogo },
-  { name: '금융결제원', logo: kftcLogo },
-  { name: 'Apple', logo: appleLogo },
-  { name: '카카오', logo: kakaoLogo },
-  { name: '현대자동차', logo: hyundaiLogo },
-  { name: '카모아', logo: carmoreLogo, logoClassName: 'h-14 w-36 object-cover' },
-  { name: 'SK엔무브', logo: skEnmoveLogo, cropWidth: 330 },
-  { name: '삼일PwC', logo: samilPwcLogo, cropWidth: 240 },
-  { name: '주택도시보증공사', logo: hugLogo },
-  { name: 'LG전자', logo: lgElectronicsLogo },
+  { name: 'NC', logo: ncLogo, logoWidth: 320 },
+  { name: '당근', logo: daangnLogo, logoWidth: 270 },
+  { name: '삼성전자', logo: samsungLogo, logoWidth: 124 },
+  { name: 'SK하이닉스', logo: skHynixLogo, logoWidth: 128 },
+  { name: '금융결제원', logo: kftcLogo, logoWidth: 124 },
+  { name: 'Apple', logo: appleLogo, logoWidth: 52 },
+  { name: '카카오', logo: kakaoLogo, logoWidth: 124 },
+  { name: '현대자동차', logo: hyundaiLogo, logoWidth: 136 },
+  { name: '카모아', logo: carmoreLogo, logoWidth: 154 },
+  { name: 'SK엔무브', logo: skEnmoveLogo, logoWidth: 330 },
+  { name: '삼일PwC', logo: samilPwcLogo, logoWidth: 200 },
+  { name: '주택도시보증공사', logo: hugLogo, logoWidth: 122 },
+  { name: 'LG전자', logo: lgElectronicsLogo, logoWidth: 132 },
 ]
 
 const graduateSchools = [
@@ -40,15 +40,14 @@ const graduateSchools = [
   { name: 'UT Austin 대학원', logo: utAustinLogo, logoClassName: 'h-24 w-full max-w-56 object-contain' },
 ]
 
-const WorkplaceLogo = ({ name, logo, cropWidth, logoClassName = 'h-14 w-36 object-contain' }) => (
-  <div className="flex h-20 w-full items-center justify-center">
-    {cropWidth ? (
-      <div className="relative h-20 w-40 overflow-hidden">
-        <img src={logo} alt={`${name} 로고`} style={{ width: cropWidth }} className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" />
-      </div>
-    ) : (
-      <img src={logo} alt={`${name} 로고`} className={logoClassName} />
-    )}
+const WorkplaceLogo = ({ name, logo, logoWidth }) => (
+  <div className="relative h-16 w-full max-w-36 overflow-hidden">
+    <img
+      src={logo}
+      alt={`${name} 로고`}
+      style={{ width: logoWidth }}
+      className="absolute left-1/2 top-1/2 h-auto max-w-none -translate-x-1/2 -translate-y-1/2"
+    />
   </div>
 )
 

@@ -1,4 +1,5 @@
 import { FiBookOpen, FiCode, FiUsers } from 'react-icons/fi'
+import compLogo from '@/assets/logo/comp-logo.png'
 
 const activities = [
   {
@@ -35,11 +36,10 @@ const AboutPage = () => (
           </p>
         </div>
 
-        <div aria-hidden="true" className="relative flex min-h-64 items-center justify-center overflow-hidden rounded-3xl border border-blue-300/20 bg-[radial-gradient(circle_at_50%_45%,rgba(45,107,255,0.34),rgba(0,9,37,0)_65%)] md:min-h-80">
-          <div className="absolute inset-6 rounded-[1.25rem] border border-blue-300/10" />
-          <div className="absolute h-44 w-44 rounded-full border border-blue-400/30 shadow-[0_0_75px_rgba(55,118,255,0.3)] md:h-52 md:w-52" />
-          <span className="relative text-6xl font-bold tracking-[-0.06em] text-white md:text-7xl">COMP</span>
-          <span className="absolute bottom-8 text-xs tracking-[0.35em] text-blue-200/60">SINCE 1988</span>
+        <div className="flex items-center justify-center">
+          <div className="aspect-square w-full max-w-[400px] overflow-hidden rounded-full">
+            <img src={compLogo} alt="COMP 로고" className="h-full w-full scale-[1.06] object-cover" />
+          </div>
         </div>
       </section>
 

@@ -1,9 +1,21 @@
 import SectionGroup from '@/components/card/SectionGroup'
 import ScrollReveal from '@/components/ScrollReveal'
 import { galleryGroups } from '@/data/gallery'
-import { FiImage } from 'react-icons/fi'
+import { useEffect, useRef, useState } from 'react'
+import { FiImage, FiX } from 'react-icons/fi'
 
 const GalleryPage = () => {
+  const [selectedPhoto, setSelectedPhoto] = useState(null)
+  const dialogRef = useRef(null)
+
+  useEffect(() => {
+    if (selectedPhoto && !dialogRef.current?.open) {
+      dialogRef.current?.showModal()
+    }
+  }, [selectedPhoto])
+
+  const closePhoto = () => dialogRef.current?.close()
+
   return (
     <section className="min-h-screen relative overflow-hidden py-10">
 
@@ -28,10 +40,39 @@ const GalleryPage = () => {
       <div className="flex flex-col gap-12 px-5 py-12 sm:px-10 lg:px-16">
         {galleryGroups.map(({ generation, items }) => (
           <ScrollReveal key={generation}>
-            <SectionGroup generation={generation} items={items} />
+            <SectionGroup generation={generation} items={items} onImageClick={setSelectedPhoto} />
           </ScrollReveal>
         ))}
       </div>
+
+      <dialog
+        ref={dialogRef}
+        aria-label="갤러리 사진 원본 보기"
+        onClose={() => setSelectedPhoto(null)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) closePhoto()
+        }}
+        className="fixed inset-0 m-auto max-h-[95dvh] max-w-[95vw] overflow-visible border-0 bg-transparent p-0 text-white backdrop:bg-black/85"
+      >
+        {selectedPhoto && (
+          <div className="relative flex flex-col items-center gap-3">
+            <button
+              type="button"
+              onClick={closePhoto}
+              aria-label="사진 닫기"
+              className="absolute right-2 top-2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black focus-visible:outline-2 focus-visible:outline-blue-400"
+            >
+              <FiX size={22} aria-hidden="true" />
+            </button>
+            <img
+              src={selectedPhoto.image}
+              alt={selectedPhoto.alt || selectedPhoto.title}
+              className="max-h-[calc(95dvh-3rem)] max-w-[95vw] rounded-lg object-contain"
+            />
+            <p className="text-center text-sm text-white/80">{selectedPhoto.title}</p>
+          </div>
+        )}
+      </dialog>
 
     </section>
   )

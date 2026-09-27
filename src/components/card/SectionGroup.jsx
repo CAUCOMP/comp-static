@@ -1,6 +1,6 @@
 import ArchiveCard from './Card'
 
-const SectionGroup = ({ generation, items }) => {
+const SectionGroup = ({ generation, items, onImageClick }) => {
   return (
     <div className="flex flex-col gap-4">
 
@@ -13,7 +13,9 @@ const SectionGroup = ({ generation, items }) => {
         {items.map((item) => (
           <ArchiveCard 
             key={item.image || item.title}
-            {...item} />
+            {...item}
+            onClick={onImageClick && item.image ? () => onImageClick(item) : undefined}
+          />
         ))}
       </div>
 

@@ -7,6 +7,8 @@ import kftcLogo from '@/assets/organizations/kftc.png'
 import ncLogo from '@/assets/organizations/nc.png'
 import samsungLogo from '@/assets/organizations/samsung.svg'
 import skHynixLogo from '@/assets/organizations/sk-hynix.png'
+import koreaUniversityLogo from '@/assets/organizations/korea-university.png'
+import seoulNationalUniversityLogo from '@/assets/organizations/seoul-national-university.png'
 
 const workplaces = [
   { name: 'NC', logo: ncLogo, cropWidth: 400 },
@@ -18,7 +20,10 @@ const workplaces = [
   { name: '카카오', logo: kakaoLogo },
 ]
 
-const graduateSchools = ['고려대학교 대학원', '서울대학교 대학원']
+const graduateSchools = [
+  { name: '고려대학교 대학원', logo: koreaUniversityLogo, logoClassName: 'h-24 w-24 object-contain' },
+  { name: '서울대학교 대학원', logo: seoulNationalUniversityLogo, logoClassName: 'h-28 w-24 object-cover object-left' },
+]
 
 const WorkplaceLogo = ({ name, logo, cropWidth }) => (
   <div className="flex h-20 w-full items-center justify-center">
@@ -101,10 +106,11 @@ const OBPage = () => {
           <p className="text-sm tracking-[0.25em] text-blue-300/70">FURTHER STUDY</p>
           <h2 id="ob-study-heading" className="mt-3 text-2xl font-semibold md:text-3xl">배움을 이어가는 선배들</h2>
           <p className="mt-4 text-white/70">대학원에서 전문성을 넓혀가는 선배들도 있습니다.</p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          <div className="mt-8 grid grid-cols-2 gap-3">
             {graduateSchools.map((school) => (
-              <div key={school} className="rounded-2xl border border-blue-300/20 bg-blue-500/[0.08] px-6 py-7 text-lg font-medium break-keep">
-                {school}
+              <div key={school.name} className="flex min-h-48 flex-col items-center justify-center gap-3 rounded-2xl border border-blue-300/20 bg-white px-4 py-5 text-center">
+                <img src={school.logo} alt={`${school.name} 로고`} className={school.logoClassName} />
+                <span className="text-sm font-medium text-slate-700 break-keep">{school.name}</span>
               </div>
             ))}
           </div>

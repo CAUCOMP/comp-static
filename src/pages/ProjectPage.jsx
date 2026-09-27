@@ -43,7 +43,7 @@ const ProjectPage = () => {
 
       </div>
 
-      <div className="flex flex-col gap-12 px-16 py-12">
+      <div className="flex flex-col gap-12 px-5 py-12 sm:px-10 lg:px-16">
         {data.map(({ generation, items }) => (
           <SectionGroup key={generation} generation={generation} items={items} />
         ))}

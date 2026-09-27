@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 
-const ArchiveCard = ({ image, title, subtitle }) => {
+const ArchiveCard = ({ image, title, subtitle, alt }) => {
   return (
     <section className="flex flex-col">
 
       <div className="w-full aspect-square rounded-xl overflow-hidden border border-blue-400/20 bg-blue-500/10 group-hover:border-blue-400/50">
         {image
-          ? <img src={image} alt={title} className="w-full h-full object-cover" />
+          ? <img src={image} alt={alt || title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           : <div className="w-full h-full" />
         }
       </div>

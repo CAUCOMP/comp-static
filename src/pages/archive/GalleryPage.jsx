@@ -1,32 +1,9 @@
 import SectionGroup from '@/components/card/SectionGroup'
 import ScrollReveal from '@/components/ScrollReveal'
+import { galleryGroups } from '@/data/gallery'
 import { FiImage } from 'react-icons/fi'
 
 const GalleryPage = () => {
-
-  const data = [
-    {
-      generation: 39,
-      items: [
-        { title: "OT", subtitle: "대체텍스트"},
-        { title: "OT", subtitle: "대체텍스트"},
-        { title: "OT", subtitle: "대체텍스트"},
-        { title: "OT", subtitle: "대체텍스트"},
-        { title: "OT", subtitle: "대체텍스트"},
-        { title: "OT", subtitle: "대체텍스트"},
-      ]
-    },
-    {
-      generation: 38,
-      items: [
-        { title: "OT", subtitle: "대체텍스트"},
-        { title: "OT", subtitle: "대체텍스트"},
-        { title: "OT", subtitle: "대체텍스트"},
-        { title: "OT", subtitle: "대체텍스트"},
-      ]
-    }
-  ]
-
   return (
     <section className="min-h-screen relative overflow-hidden py-10">
 
@@ -49,7 +26,7 @@ const GalleryPage = () => {
       </div>
 
       <div className="flex flex-col gap-12 px-5 py-12 sm:px-10 lg:px-16">
-        {data.map(({ generation, items }) => (
+        {galleryGroups.map(({ generation, items }) => (
           <ScrollReveal key={generation}>
             <SectionGroup generation={generation} items={items} />
           </ScrollReveal>

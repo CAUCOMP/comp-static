@@ -10,9 +10,9 @@ const SectionGroup = ({ generation, items }) => {
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 lg:gap-6">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <ArchiveCard 
-            key={index} 
+            key={item.image || item.title}
             {...item} />
         ))}
       </div>

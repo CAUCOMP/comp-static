@@ -5,7 +5,7 @@ const ArchiveCard = ({ image, title, subtitle, alt, onClick }) => {
     <CardElement
       type={onClick ? 'button' : undefined}
       onClick={onClick}
-      aria-label={onClick ? `${title} 사진 크게 보기` : undefined}
+      aria-label={onClick ? `${alt || title || '사진'} 크게 보기` : undefined}
       className={`group flex w-full flex-col ${onClick ? 'cursor-zoom-in focus-visible:rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400' : ''}`}
     >
 
@@ -16,11 +16,14 @@ const ArchiveCard = ({ image, title, subtitle, alt, onClick }) => {
         }
       </span>
 
-      <span className="w-full text-xl font-semibold group-hover:text-blue-300 text-center pt-3">
-        {title}
-      </span>
-
-      {subtitle && <span className="w-full text-s text-white/50 text-center">{subtitle}</span>}
+      {!onClick && (
+        <>
+          <span className="w-full text-xl font-semibold group-hover:text-blue-300 text-center pt-3">
+            {title}
+          </span>
+          {subtitle && <span className="w-full text-s text-white/50 text-center">{subtitle}</span>}
+        </>
+      )}
 
     </CardElement>
   )

@@ -55,7 +55,7 @@ const GalleryPage = () => {
         className="fixed inset-0 m-auto max-h-[95dvh] max-w-[95vw] overflow-visible border-0 bg-transparent p-0 text-white backdrop:bg-black/85"
       >
         {selectedPhoto && (
-          <div className="relative flex flex-col items-center gap-3">
+          <div className="relative flex flex-col items-center">
             <button
               type="button"
               onClick={closePhoto}
@@ -66,10 +66,9 @@ const GalleryPage = () => {
             </button>
             <img
               src={selectedPhoto.image}
-              alt={selectedPhoto.alt || selectedPhoto.title}
-              className="max-h-[calc(95dvh-3rem)] max-w-[95vw] rounded-lg object-contain"
+              alt={selectedPhoto.alt}
+              className="max-h-[95dvh] max-w-[95vw] rounded-lg object-contain"
             />
-            <p className="text-center text-sm text-white/80">{selectedPhoto.title}</p>
           </div>
         )}
       </dialog>

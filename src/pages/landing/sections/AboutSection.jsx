@@ -34,17 +34,17 @@ const AboutSection = () => {
     <section id="about" className="relative min-h-screen flex flex-col justify-center overflow-x-clip px-6 py-20 md:p-20 gap-6 scroll-mt-20">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-        <ScrollReveal>
+        <ScrollReveal className="mx-auto w-full max-w-6xl text-center">
             <p className="text-blue-300/60 text-sm tracking-widest">Why COMP?</p>
             <h2 className="font-medium text-[28px]">컴퓨터와 나와 친구들이 있는 곳</h2>
         </ScrollReveal>
 
         {/* 컨텐츠 영역 */}
-        <div className="flex flex-col xl:flex-row gap-10 items-center relative">
+        <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-10 xl:flex-row">
             <ScrollReveal delay={80} className="scroll-reveal--scale w-full max-w-90 shrink-0">
               <ImageSlider />
             </ScrollReveal>
-            <div className="flex flex-col items-start gap-6">
+            <div className="flex w-full max-w-xl flex-col items-start gap-6">
               {features.map((feature, index) => (
                 <ScrollReveal key={feature.title} delay={index * 70} className="w-full">
                   <article className="w-full flex flex-col gap-1">

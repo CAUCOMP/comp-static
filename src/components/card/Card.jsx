@@ -20,8 +20,7 @@ const ArchiveCard = ({ image, title, subtitle, alt, onClick }) => {
         {title}
       </span>
 
-      {/* 서브타이틀 */}
-      <span className="w-full text-s text-white/50 text-center">{subtitle}</span>
+      {subtitle && <span className="w-full text-s text-white/50 text-center">{subtitle}</span>}
 
     </CardElement>
   )

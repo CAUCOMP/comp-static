@@ -1,4 +1,5 @@
 import { FiUsers } from 'react-icons/fi'
+import ScrollReveal from '@/components/ScrollReveal'
 import { alumni } from '@/data/alumni'
 import appleLogo from '@/assets/organizations/apple.svg'
 import daangnLogo from '@/assets/organizations/daangn.webp'
@@ -71,7 +72,7 @@ const OBPage = () => {
       <div className="relative w-full flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/15 via-blue-500/5 to-transparent" />
 
-        <div className="relative flex flex-col items-center gap-3 pt-20">
+        <ScrollReveal className="relative flex w-full flex-col items-center gap-3 px-6 pt-20 text-center">
           <div className="w-12 h-12 rounded-full border border-blue-400/30 bg-blue-500/10 flex items-center justify-center">
             <FiUsers className="text-blue-300 text-xl" />
           </div>
@@ -80,53 +81,59 @@ const OBPage = () => {
           <p className="text-white/40">
             COMP의 선배님들은 현재 다양한 분야에서 활약하고 계십니다.
           </p>
-        </div>
+        </ScrollReveal>
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 pb-12 pt-20 md:px-10">
         <section aria-labelledby="ob-path-heading">
-          <p className="text-sm tracking-[0.25em] text-blue-300/70">WHERE THEY ARE</p>
-          <h2 id="ob-path-heading" className="mt-3 text-2xl font-semibold md:text-3xl">다양한 곳에서 이어지는 COMP</h2>
-          <p className="mt-5 max-w-3xl text-base leading-8 text-white/70 break-keep md:text-lg">
-            COMP 선배들은 개발을 비롯해 컨설팅, 금융, 공공기관, 스타트업 등 다양한 분야에서 활동하고 있습니다.
-            아래는 선배들이 진출한 곳의 일부입니다.
-          </p>
+          <ScrollReveal>
+            <p className="text-sm tracking-[0.25em] text-blue-300/70">WHERE THEY ARE</p>
+            <h2 id="ob-path-heading" className="mt-3 text-2xl font-semibold md:text-3xl">다양한 곳에서 이어지는 COMP</h2>
+            <p className="mt-5 max-w-3xl text-base leading-8 text-white/70 break-keep md:text-lg">
+              COMP 선배들은 개발을 비롯해 컨설팅, 금융, 공공기관, 스타트업 등 다양한 분야에서 활동하고 있습니다.
+              아래는 선배들이 진출한 곳의 일부입니다.
+            </p>
 
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {workplaces.map((workplace) => (
-              <div key={workplace.name} className="flex min-h-36 flex-col items-center justify-center gap-2 rounded-2xl border border-blue-300/20 bg-white px-4 py-5 text-center shadow-[0_12px_32px_rgba(0,0,0,0.12)]">
-                <WorkplaceLogo {...workplace} />
-                <span className="text-sm font-medium text-slate-700">{workplace.name}</span>
-              </div>
-            ))}
-          </div>
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {workplaces.map((workplace) => (
+                <div key={workplace.name} className="flex min-h-36 flex-col items-center justify-center gap-2 rounded-2xl border border-blue-300/20 bg-white px-4 py-5 text-center shadow-[0_12px_32px_rgba(0,0,0,0.12)]">
+                  <WorkplaceLogo {...workplace} />
+                  <span className="text-sm font-medium text-slate-700">{workplace.name}</span>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </section>
 
         <section aria-labelledby="ob-study-heading" className="mt-16 border-t border-blue-300/20 pt-12">
-          <p className="text-sm tracking-[0.25em] text-blue-300/70">FURTHER STUDY</p>
-          <h2 id="ob-study-heading" className="mt-3 text-2xl font-semibold md:text-3xl">배움을 이어가는 선배들</h2>
-          <p className="mt-4 text-white/70">대학원에서 전문성을 넓혀가는 선배들도 있습니다.</p>
-          <div className="mt-8 grid grid-cols-2 gap-3">
-            {graduateSchools.map((school) => (
-              <div key={school.name} className="flex min-h-48 flex-col items-center justify-center gap-3 rounded-2xl border border-blue-300/20 bg-white px-4 py-5 text-center">
-                <img src={school.logo} alt={`${school.name} 로고`} className={school.logoClassName} />
-                <span className="text-sm font-medium text-slate-700 break-keep">{school.name}</span>
-              </div>
-            ))}
-          </div>
+          <ScrollReveal>
+            <p className="text-sm tracking-[0.25em] text-blue-300/70">FURTHER STUDY</p>
+            <h2 id="ob-study-heading" className="mt-3 text-2xl font-semibold md:text-3xl">배움을 이어가는 선배들</h2>
+            <p className="mt-4 text-white/70">대학원에서 전문성을 넓혀가는 선배들도 있습니다.</p>
+            <div className="mt-8 grid grid-cols-2 gap-3">
+              {graduateSchools.map((school) => (
+                <div key={school.name} className="flex min-h-48 flex-col items-center justify-center gap-3 rounded-2xl border border-blue-300/20 bg-white px-4 py-5 text-center">
+                  <img src={school.logo} alt={`${school.name} 로고`} className={school.logoClassName} />
+                  <span className="text-sm font-medium text-slate-700 break-keep">{school.name}</span>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </section>
 
         <section aria-labelledby="ob-members-heading" className="mt-16 border-t border-blue-300/20 pt-12">
-          <h2 id="ob-members-heading" className="text-2xl font-semibold md:text-3xl">OB 소개</h2>
-          {alumni.length === 0 ? (
-            <div className="py-12 text-center text-white/50">OB 소개를 준비하고 있습니다.</div>
-          ) : (
-            <div className="grid gap-10 py-12 md:grid-cols-2">
-              {alumni.map((member) => (
-                <OBCard key={member.id} {...member} />
-              ))}
-            </div>
-          )}
+          <ScrollReveal>
+            <h2 id="ob-members-heading" className="text-2xl font-semibold md:text-3xl">OB 소개</h2>
+            {alumni.length === 0 ? (
+              <div className="py-12 text-center text-white/50">OB 소개를 준비하고 있습니다.</div>
+            ) : (
+              <div className="grid gap-10 py-12 md:grid-cols-2">
+                {alumni.map((member) => (
+                  <OBCard key={member.id} {...member} />
+                ))}
+              </div>
+            )}
+          </ScrollReveal>
         </section>
       </div>
     </section>

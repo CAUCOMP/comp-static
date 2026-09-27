@@ -2,14 +2,21 @@ import { FiUsers } from 'react-icons/fi'
 import ScrollReveal from '@/components/ScrollReveal'
 import { alumni } from '@/data/alumni'
 import appleLogo from '@/assets/organizations/apple.svg'
+import carmoreLogo from '@/assets/organizations/carmore.png'
 import daangnLogo from '@/assets/organizations/daangn.webp'
+import hugLogo from '@/assets/organizations/hug.png'
+import hyundaiLogo from '@/assets/organizations/hyundai.png'
 import kakaoLogo from '@/assets/organizations/kakao.svg'
 import kftcLogo from '@/assets/organizations/kftc.png'
+import lgElectronicsLogo from '@/assets/organizations/lg-electronics.svg'
 import ncLogo from '@/assets/organizations/nc.png'
+import samilPwcLogo from '@/assets/organizations/samil-pwc.jpg'
 import samsungLogo from '@/assets/organizations/samsung.svg'
+import skEnmoveLogo from '@/assets/organizations/sk-enmove.jpg'
 import skHynixLogo from '@/assets/organizations/sk-hynix.png'
 import koreaUniversityLogo from '@/assets/organizations/korea-university.png'
 import seoulNationalUniversityLogo from '@/assets/organizations/seoul-national-university.png'
+import utAustinLogo from '@/assets/organizations/ut-austin.png'
 
 const workplaces = [
   { name: 'NC', logo: ncLogo, cropWidth: 400 },
@@ -19,21 +26,28 @@ const workplaces = [
   { name: '금융결제원', logo: kftcLogo },
   { name: 'Apple', logo: appleLogo },
   { name: '카카오', logo: kakaoLogo },
+  { name: '현대자동차', logo: hyundaiLogo },
+  { name: '카모아', logo: carmoreLogo, logoClassName: 'h-14 w-36 object-cover' },
+  { name: 'SK엔무브', logo: skEnmoveLogo, cropWidth: 330 },
+  { name: '삼일PwC', logo: samilPwcLogo, cropWidth: 240 },
+  { name: '주택도시보증공사', logo: hugLogo },
+  { name: 'LG전자', logo: lgElectronicsLogo },
 ]
 
 const graduateSchools = [
   { name: '고려대학교 대학원', logo: koreaUniversityLogo, logoClassName: 'h-24 w-24 object-contain' },
   { name: '서울대학교 대학원', logo: seoulNationalUniversityLogo, logoClassName: 'h-28 w-24 object-cover object-left' },
+  { name: 'UT Austin 대학원', logo: utAustinLogo, logoClassName: 'h-24 w-full max-w-56 object-contain' },
 ]
 
-const WorkplaceLogo = ({ name, logo, cropWidth }) => (
+const WorkplaceLogo = ({ name, logo, cropWidth, logoClassName = 'h-14 w-36 object-contain' }) => (
   <div className="flex h-20 w-full items-center justify-center">
     {cropWidth ? (
       <div className="relative h-20 w-40 overflow-hidden">
         <img src={logo} alt={`${name} 로고`} style={{ width: cropWidth }} className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" />
       </div>
     ) : (
-      <img src={logo} alt={`${name} 로고`} className="h-14 w-36 object-contain" />
+      <img src={logo} alt={`${name} 로고`} className={logoClassName} />
     )}
   </div>
 )
@@ -90,11 +104,11 @@ const OBPage = () => {
             <p className="text-sm tracking-[0.25em] text-blue-300/70">WHERE THEY ARE</p>
             <h2 id="ob-path-heading" className="mt-3 text-2xl font-semibold md:text-3xl">다양한 곳에서 이어지는 COMP</h2>
             <p className="mt-5 max-w-3xl text-base leading-8 text-white/70 break-keep md:text-lg">
-              COMP 선배들은 개발을 비롯해 컨설팅, 금융, 공공기관, 스타트업 등 다양한 분야에서 활동하고 있습니다.
+              COMP 선배들은 개발 직무를 비롯해 대기업·외국계 기업, 컨설팅·회계법인, 금융권, 공공기관, 스타트업 등 다양한 분야에서 활동하고 있습니다.
               아래는 선배들이 진출한 곳의 일부입니다.
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {workplaces.map((workplace) => (
                 <div key={workplace.name} className="flex min-h-36 flex-col items-center justify-center gap-2 rounded-2xl border border-blue-300/20 bg-white px-4 py-5 text-center shadow-[0_12px_32px_rgba(0,0,0,0.12)]">
                   <WorkplaceLogo {...workplace} />
@@ -110,7 +124,7 @@ const OBPage = () => {
             <p className="text-sm tracking-[0.25em] text-blue-300/70">FURTHER STUDY</p>
             <h2 id="ob-study-heading" className="mt-3 text-2xl font-semibold md:text-3xl">배움을 이어가는 선배들</h2>
             <p className="mt-4 text-white/70">대학원에서 전문성을 넓혀가는 선배들도 있습니다.</p>
-            <div className="mt-8 grid grid-cols-2 gap-3">
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {graduateSchools.map((school) => (
                 <div key={school.name} className="flex min-h-48 flex-col items-center justify-center gap-3 rounded-2xl border border-blue-300/20 bg-white px-4 py-5 text-center">
                   <img src={school.logo} alt={`${school.name} 로고`} className={school.logoClassName} />

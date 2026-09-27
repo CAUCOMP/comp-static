@@ -1,5 +1,6 @@
 import { FiBookOpen, FiCode, FiUsers } from 'react-icons/fi'
 import compLogo from '@/assets/logo/comp-logo.png'
+import ScrollReveal from '@/components/ScrollReveal'
 
 const activities = [
   {
@@ -25,7 +26,7 @@ const AboutPage = () => (
 
     <div className="mx-auto w-full max-w-6xl px-6 pb-28 pt-36 md:px-10 md:pt-44">
       <section aria-labelledby="about-heading" className="grid items-center gap-12 border-b border-blue-300/20 pb-20 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
-        <div>
+        <ScrollReveal>
           <p className="mb-5 text-sm tracking-[0.25em] text-blue-300/70">ABOUT US</p>
           <h1 id="about-heading" className="max-w-2xl text-4xl font-semibold leading-[1.35] break-keep md:text-5xl">
             함께 배우고,<br />함께 만드는 COMP
@@ -34,27 +35,31 @@ const AboutPage = () => (
             COMP는 1988년부터 이어져 온 중앙대학교 웹·앱 개발 동아리입니다.
             소수정예로 모여 스터디에서 배우고, 프로젝트에서 직접 구현하며 성장합니다.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="flex items-center justify-center">
+        <ScrollReveal delay={100} className="scroll-reveal--scale flex items-center justify-center">
           <div className="aspect-square w-full max-w-[400px] overflow-hidden rounded-full">
             <img src={compLogo} alt="COMP 로고" className="h-full w-full scale-[1.06] object-cover" />
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       <section aria-labelledby="activities-heading" className="pt-16">
-        <p className="text-sm tracking-[0.25em] text-blue-300/70">WHAT WE DO</p>
-        <h2 id="activities-heading" className="mt-3 text-2xl font-semibold md:text-3xl">COMP에서 함께하는 일</h2>
+        <ScrollReveal>
+          <p className="text-sm tracking-[0.25em] text-blue-300/70">WHAT WE DO</p>
+          <h2 id="activities-heading" className="mt-3 text-2xl font-semibold md:text-3xl">COMP에서 함께하는 일</h2>
+        </ScrollReveal>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {activities.map(({ icon, title, description }) => (
-            <article key={title} className="rounded-2xl border border-blue-300/15 bg-white/[0.04] p-6 md:p-7">
-              <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-full border border-blue-400/30 bg-blue-500/10 text-xl text-blue-300">
-                {icon}
-              </div>
-              <h3 className="text-xl font-semibold">{title}</h3>
-              <p className="mt-3 leading-7 text-white/65 break-keep">{description}</p>
-            </article>
+          {activities.map(({ icon, title, description }, index) => (
+            <ScrollReveal key={title} delay={index * 70}>
+              <article className="rounded-2xl border border-blue-300/15 bg-white/[0.04] p-6 md:p-7">
+                <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-full border border-blue-400/30 bg-blue-500/10 text-xl text-blue-300">
+                  {icon}
+                </div>
+                <h3 className="text-xl font-semibold">{title}</h3>
+                <p className="mt-3 leading-7 text-white/65 break-keep">{description}</p>
+              </article>
+            </ScrollReveal>
           ))}
         </div>
       </section>

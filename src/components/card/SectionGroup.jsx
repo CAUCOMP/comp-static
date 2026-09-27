@@ -9,7 +9,7 @@ const SectionGroup = ({ generation, items }) => {
         <div className="flex-1 h-[1px] bg-gradient-to-r from-blue-400/30 to-transparent" />
       </div>
 
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 lg:gap-6">
         {items.map((item, index) => (
           <ArchiveCard 
             key={index} 

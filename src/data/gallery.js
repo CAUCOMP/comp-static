@@ -5,10 +5,10 @@ import gen40Friends from '@/assets/gallery/gen-40/friends.jpeg'
 import gen39PhotoBooth from '@/assets/gallery/gen-39/photo-booth.png'
 import gen39Walk from '@/assets/gallery/gen-39/walk.jpeg'
 import gen39Gathering from '@/assets/gallery/gen-39/gathering.jpeg'
-import gen36Campus from '@/assets/gallery/gen-36/campus.jpeg'
-import gen36Trip from '@/assets/gallery/gen-36/trip.jpeg'
-import gen36Gathering from '@/assets/gallery/gen-36/gathering.jpeg'
-import gen36Friends from '@/assets/gallery/gen-36/friends.jpeg'
+import gen36Campus from '@/assets/gallery/gen-34-35-36/campus.jpeg'
+import gen36Trip from '@/assets/gallery/gen-34-35-36/trip.jpeg'
+import gen36Gathering from '@/assets/gallery/gen-34-35-36/gathering.jpeg'
+import gen36Friends from '@/assets/gallery/gen-34-35-36/friends.jpeg'
 
 export const galleryGroups = [
   {

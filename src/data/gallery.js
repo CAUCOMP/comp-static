@@ -29,12 +29,12 @@ export const galleryGroups = [
     ],
   },
   {
-    generation: 36,
+    generation: '34&35&36',
     items: [
       { image: gen36Campus, alt: '캠퍼스에서 찍은 즉석 사진 세 장을 들고 있는 모습' },
-      { image: gen36Trip, alt: '대성리역 앞에서 함께 찍은 36기 단체 사진' },
-      { image: gen36Gathering, alt: '실내에 모여 함께 찍은 36기 단체 사진' },
-      { image: gen36Friends, alt: '네 명의 36기 구성원이 함께 찍은 사진' },
+      { image: gen36Trip, alt: '대성리역 앞에서 함께 찍은 COMP 단체 사진' },
+      { image: gen36Gathering, alt: '실내에 모여 함께 찍은 COMP 단체 사진' },
+      { image: gen36Friends, alt: '네 명의 COMP 구성원이 함께 찍은 사진' },
     ],
   },
 ]

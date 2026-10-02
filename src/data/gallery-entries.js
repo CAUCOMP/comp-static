@@ -8,6 +8,13 @@ export const galleryEntries = [
       { file: 'gen-40/friends.jpeg', alt: '실내에서 함께 사진을 찍은 40기 구성원들' },
       { file: 'gen-40/festival40th.jpeg', alt: '중앙대학교 축제 포토부스에서 찍은 40기 사진' },
       { file: 'gen-40/bongsa40.jpeg', alt: '동대구역 앞에서 함께 찍은 40기 단체 사진' },
+      { file: 'gen-40/volunteer-group.jpeg', alt: '봉사활동 현수막을 들고 함께 찍은 40기 활동 사진' },
+      { file: 'gen-40/board-games.jpeg', alt: '보드게임을 하며 함께 찍은 40기 구성원들' },
+      { file: 'gen-40/restaurant.jpeg', alt: '식당에서 포즈를 취한 40기 구성원' },
+      { file: 'gen-40/stream.jpeg', alt: '계곡에서 함께 찍은 40기 단체 사진' },
+      { file: 'gen-40/car-ride.jpeg', alt: '차량으로 이동 중인 40기 구성원들' },
+      { file: 'gen-40/indoor-gathering.jpeg', alt: '실내에 둘러앉아 함께 찍은 40기 단체 사진' },
+      { file: 'gen-40/dinner.jpeg', alt: '식사 중 함께 찍은 40기 구성원들' },
     ],
   },
   {

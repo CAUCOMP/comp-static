@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "gallery:thumbnails": "node scripts/generate-gallery-thumbnails.mjs",
+    "predev": "npm run gallery:thumbnails",
     "dev": "vite",
+    "prebuild": "npm run gallery:thumbnails",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -28,6 +31,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "sharp": "0.35.5",
     "vite": "^7.3.1"
   }
 }

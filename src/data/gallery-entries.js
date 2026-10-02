@@ -1,0 +1,58 @@
+export const galleryEntries = [
+  {
+    generation: 40,
+    items: [
+      { file: 'gen-40/spring.jpeg', alt: '벚꽃나무 앞에서 함께 찍은 40기 단체 사진' },
+      { file: 'gen-40/gathering.jpeg', alt: '실내에 모여 포즈를 취한 40기 구성원들' },
+      { file: 'gen-40/study.jpeg', alt: '강의실에서 함께 공부하는 40기 구성원들' },
+      { file: 'gen-40/friends.jpeg', alt: '실내에서 함께 사진을 찍은 40기 구성원들' },
+      { file: 'gen-40/festival40th.jpeg', alt: '중앙대학교 축제 포토부스에서 찍은 40기 사진' },
+      { file: 'gen-40/bongsa40.jpeg', alt: '동대구역 앞에서 함께 찍은 40기 단체 사진' },
+    ],
+  },
+  {
+    generation: 39,
+    items: [
+      { file: 'gen-39/photo-booth.png', alt: '포토부스에서 함께 찍은 39기 구성원들의 사진' },
+      { file: 'gen-39/walk.jpeg', alt: '야외 산책길을 함께 걷는 39기 구성원들' },
+      { file: 'gen-39/gathering.jpeg', alt: '실내에서 함께 찍은 39기 단체 사진' },
+      { file: 'gen-39/39thmetting.jpeg', alt: '식당에 모여 함께 찍은 39기 단체 사진' },
+      { file: 'gen-39/festival.jpeg', alt: 'COMP 부스에 함께 모인 39기 구성원들' },
+      { file: 'gen-39/study.jpeg', alt: '동아리방에서 함께 공부하는 39기 구성원들' },
+      { file: 'gen-39/mt.jpeg', alt: 'MT에서 함께 찍은 39기 단체 사진' },
+    ],
+  },
+  {
+    generation: 37,
+    items: [
+      { file: 'gen-37/37thfestivalpicture.jpeg', alt: '포토부스에서 함께 찍은 37기 구성원들의 사진' },
+      { file: 'gen-37/37thcomp.jpeg', alt: '캠퍼스 건물 앞에서 함께 찍은 37기 단체 사진' },
+      { file: 'gen-37/37thmt2.jpeg', alt: '실내에서 함께 활동하는 37기 구성원들' },
+      { file: 'gen-37/37thdonknow.jpeg', alt: '식당에서 함께 찍은 37기 단체 사진' },
+      { file: 'gen-37/37thmt.jpeg', alt: '실내에 모여 포즈를 취한 37기 구성원들' },
+      { file: 'gen-37/37thopen.jpeg', alt: '식당에 모인 37기 구성원들' },
+      { file: 'gen-37/37thcompnight.jpeg', alt: 'COMP 현수막 앞에서 함께 찍은 37기 단체 사진' },
+    ],
+  },
+  {
+    generation: '34 & 35 & 36',
+    items: [
+      { file: 'gen-34-35-36/campus.jpeg', alt: '캠퍼스에서 찍은 즉석 사진 세 장을 들고 있는 모습' },
+      { file: 'gen-34-35-36/trip.jpeg', alt: '대성리역 앞에서 함께 찍은 COMP 단체 사진' },
+      { file: 'gen-34-35-36/gathering.jpeg', alt: '실내에 모여 함께 찍은 COMP 단체 사진' },
+      { file: 'gen-34-35-36/friends.jpeg', alt: '네 명의 COMP 구성원이 함께 찍은 사진' },
+      { file: 'gen-34-35-36/36thbaseball.jpeg', alt: '야구장에서 함께 찍은 COMP 구성원들' },
+      { file: 'gen-34-35-36/36thcomp.jpeg', alt: 'COMP 포토부스에서 함께 찍은 사진' },
+      { file: 'gen-34-35-36/36thcompnight.jpeg', alt: '식당에 모인 COMP 구성원들' },
+      { file: 'gen-34-35-36/36thenglish.jpeg', alt: '실내에서 함께 활동하는 COMP 구성원들' },
+      { file: 'gen-34-35-36/36thmilitary.jpeg', alt: '실내 행사에서 함께 찍은 COMP 단체 사진' },
+      { file: 'gen-34-35-36/36thpresent.jpeg', alt: '강의실에서 발표하는 COMP 구성원' },
+      { file: 'gen-34-35-36/36thtravel.jpeg', alt: '바다를 배경으로 함께 찍은 COMP 단체 사진' },
+      { file: 'gen-34-35-36/36thtravel2.jpeg', alt: '여행 중 식당에 모인 COMP 구성원들' },
+      { file: 'gen-34-35-36/IMG_4990.JPG', alt: '식당에서 함께 찍은 COMP 구성원들' },
+      { file: 'gen-34-35-36/IMG_9874.jpeg', alt: '상자를 들고 있는 COMP 구성원' },
+      { file: 'gen-34-35-36/IMG_9958.JPG', alt: '실내에서 함께 활동하는 COMP 구성원들' },
+      { file: 'gen-34-35-36/IMG_9980.JPG', alt: '야외에서 함께 찍은 COMP 구성원들' },
+    ],
+  },
+]

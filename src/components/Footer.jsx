@@ -1,6 +1,10 @@
 import Icon from "./Icon";
+import { useState } from 'react'
+import ContactDialog from './ContactDialog'
 
 export default function Footer() {
+  const [contactOpen, setContactOpen] = useState(false)
+
   return (
     <footer className="bg-[#000925] text-white px-7 py-10 flex flex-col items-center text-center">
       <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-400/30 to-transparent mb-8" />
@@ -21,7 +25,7 @@ export default function Footer() {
           </svg>
         </Icon>
 
-        <Icon label="Chat">
+        <Icon label="Contact" aria-haspopup="dialog" onClick={() => setContactOpen(true)}>
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
             <path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9.4L5 21.5V18H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm16 2H4v10h3v1.6L9 16h11V6Z" />
           </svg>
@@ -37,6 +41,7 @@ export default function Footer() {
       <p className="text-white/60 text-sm">
         © 2026 COMP, All Rights Reserved.
       </p>
+      <ContactDialog open={contactOpen} onClose={() => setContactOpen(false)} />
     </footer>
   );
 }

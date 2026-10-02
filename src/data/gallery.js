@@ -8,6 +8,9 @@ import gen39PhotoBooth from '@/assets/gallery/gen-39/photo-booth.png'
 import gen39Walk from '@/assets/gallery/gen-39/walk.jpeg'
 import gen39Gathering from '@/assets/gallery/gen-39/gathering.jpeg'
 import gen39Meeting from '@/assets/gallery/gen-39/39thmetting.jpeg'
+import gen39Festival from '@/assets/gallery/gen-39/festival.jpeg'
+import gen39Study from '@/assets/gallery/gen-39/study.jpeg'
+import gen39Mt from '@/assets/gallery/gen-39/mt.jpeg'
 import gen37Festival from '@/assets/gallery/gen-37/37thfestivalpicture.jpeg'
 import gen37Comp from '@/assets/gallery/gen-37/37thcomp.jpeg'
 import gen37Mt2 from '@/assets/gallery/gen-37/37thmt2.jpeg'
@@ -51,6 +54,9 @@ export const galleryGroups = [
       { image: gen39Walk, alt: '야외 산책길을 함께 걷는 39기 구성원들' },
       { image: gen39Gathering, alt: '실내에서 함께 찍은 39기 단체 사진' },
       { image: gen39Meeting, alt: '식당에 모여 함께 찍은 39기 단체 사진' },
+      { image: gen39Festival, alt: 'COMP 부스에 함께 모인 39기 구성원들' },
+      { image: gen39Study, alt: '동아리방에서 함께 공부하는 39기 구성원들' },
+      { image: gen39Mt, alt: 'MT에서 함께 찍은 39기 단체 사진' },
     ],
   },
   {
